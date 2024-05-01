@@ -65,18 +65,20 @@ async function setUpApp() {
     });
 
     row.find('[name=loading-animation]').show()
+    row.find('[name=loading-animation-image]').show()
     row.find('[name=show-card-btn]').hide()
     showIframe.render(`#show-card-${record.id}`, {
       color: 'black',
       fontWeight: 'bold',
-      fontFamily: 'sofia,sofiaFallback,arial,sans-serif'
+      fontFamily: 'sofia, sofiaFallback, arial, sans-serif;'
     });
 
     showIframe.on('revealSuccess', function() {
       row.find('[name=card_number_token]').hide()
-      row.find('[name=loading-animation]').hide()
+      row.find('[name=loading-animation-image]').hide()
       setTimeout(() => {
         showIframe.unmount()
+        row.find('[name=loading-animation]').hide()
         row.find('[name=card_number_token]').show()
         row.find('[name=show-card-btn]').show()
       }, 5000)

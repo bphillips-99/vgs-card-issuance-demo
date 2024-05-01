@@ -30,15 +30,17 @@
             </tr>
           </thead>
           <tbody id="customer-table">
-            <tr id="template" class="d-none">
+            <tr id="template" class="d-none" style="height: 64px;">
               <td name="name"></td>
               <td name="email"></td>
               <td name="phone"></td>
               <td>
-                <span style="display:inline-block; padding: 0 4px;"><img name="loading-animation" style="height: 20px; display:none; margin-left: 10px" src="/images/loading-gif.gif" /></span>
-                <button name="show-card-btn" class="btn fade-opacity"><i class="bi bi-eye"></i></button>
-                <span name="card_number_token""></span>
-                <span name="card" style="width: 300px; height: 25px; display: inline-block; padding: 10px 0 0 45px;"></span>
+                <div style="display: flex; width:300px">
+                  <span style="display:inline-block; display:none; background: none; border: none; width:36px" name="loading-animation" ><img name="loading-animation-image" style="height: 20px; padding: 0 8px;" src="/images/loading-gif.gif" /></span>
+                  <button name="show-card-btn" class="btn fade-opacity" style="border: none;"><i class="bi bi-eye"></i></button>
+                  <div name="card_number_token" style=" height: 18px; margin-top: auto; margin-bottom: auto;" ></div>
+                  <div name="card" style=" height: 18px; display: inline-block; margin-top: auto; margin-bottom: auto; width: 200px;"></div>
+                </div>
               </td>
             </tr>
           </tbody>

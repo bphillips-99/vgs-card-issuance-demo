@@ -13,6 +13,10 @@ body > .container {
   padding-top: 80px !important;
 }
 
+.table td {
+  vertical-align: middle;
+}
+
 iframe {
   width: 100%;
   height: 100%;
